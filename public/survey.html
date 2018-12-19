@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,34 +10,160 @@
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-header" style="background-color:white">
-            Survey Questions
-        </div>
-        <div class="card-body">
-            <h1>About You</h1>
-            <form>
-                <label for="nameInput">Name (Required)</label>
-                <br>
-                <input type="text" id="nameBox" placeholder="Enter name">
-                <br>
-                <div class="form-group">
-                    <label for="exampleFormControlFile1">Profile Photo (Required)</label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <div class="container">
+        <form method="post" action="/survey">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header" style="background-color:white">
+                            Survey Questions
+                        </div>
+                        <div class="card-body">
+                            <h1>About You</h1>
+                            <label for="nameInput">Name (Required)</label>
+                            <br>
+                            <input type="text" id="nameBox" placeholder="Enter name" name="name">
+                            <br>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Profile Photo (Required)</label>
+                                <input type="file" name="picture" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </div>
-        <div class="card">
-            <h1>Question 1</h1>
-            <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                <select class="form-control form-control-lg">
-                        <option>Large select</option>
-                        <option>Large select</option>
-                      </select>
+            </div>
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="card">
+                            <h1>Question 1</h1>
+                            <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+                            <select class="form-control form-control-lg" name="q1">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 2</h1>
+                            <p>Generally speaking, you rely more on your experience than your imagination.</p>
+                            <select class="form-control form-control-lg" name="q2">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 3</h1>
+                            <p>You find it easy to stay relaxed and focused even when there is some pressure.
+                            </p>
+                            <select class="form-control form-control-lg" name="q3">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 4</h1>
+                            <p>You rarely do something just out of sheer curiosity.</p>
+                            <select class="form-control form-control-lg" name="q4">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 5</h1>
+                            <p>People can rarely upset you.</p>
+                            <select class="form-control form-control-lg" name="q5">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 6</h1>
+                            <p>It is often difficult for you to relate to other people’s feelings.</p>
+                            <select class="form-control form-control-lg" name="q6">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 7</h1>
+                            <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                            <select class="form-control form-control-lg" name="q7">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 8</h1>
+                            <p>You think that everyone’s views should be respected regardless of whether they are
+                                supported by
+                                facts or not.</p>
+                            <select class="form-control form-control-lg" name="q8">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 9</h1>
+                            <p>You rarely get carried away by fantasies and ideas.</p>
+                            <select class="form-control form-control-lg" name="q9">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                        <div class="card">
+                            <h1>Question 10</h1>
+                            <p>You feel more energetic after spending time with a group of people.</p>
+                            <select class="form-control form-control-lg" name="q10">
+                                <option>1 (Strongly Disagree)</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5 (Strongly Agree</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i>
+                Submit</button>
+        </form>
+        <div class="row">
+
+            <a href="#">API Friends List</a>
+            <p>|</p><a href="#">GitHub Repo</a>
         </div>
     </div>
 </body>
